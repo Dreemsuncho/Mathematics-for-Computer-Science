@@ -17,10 +17,44 @@ __(d) [6 pts].__ There are at least three people who are TA’s in 6.042 and hav
 ```
 There are people who have taken 6.042 and have gotten A’s in 6.042
 
--There are people is ∃x ∈ X or ∃x,y ∈ X
--who have taken 6.042 is S(x) or S(x)∧S(y)
--and have gotten A’s in 6.042 is ∧A(x) or ∧A(x)∧A(y)
+- There are people is ∃x ∈ X or ∃x,y ∈ X
+- who have taken 6.042 is S(x) or S(x)∧S(y)
+- and have gotten A’s in 6.042 is ∧A(x) or ∧A(x)∧A(y)
 
-Solution 1 (One Person). ∃x ∈ X : S(x)∧A(x)
-Solution 2 (At Least 2 Persons). ∃x,y ∈ X : S(x)∧S(y)∧A(x)∧A(y)∧¬E(x,y)
+Result 1 (One Person). ∃x ∈ X : S(x)∧A(x)
+Result 2 (At Least 2 Persons). ∃x,y ∈ X : S(x)∧S(y)∧A(x)∧A(y)∧¬E(x,y)
+```
+
+#### Solution (b):
+```
+All people who are 6.042 TA’s and have taken 6.042 got A’s in 6.042
+
+- All people is ∀x ∈ X
+- who are 6.042 TA’s is T(x)
+- and have taken 6.042 is ∧S(x)
+- got A’s in 6.042 is ⇒ A(x)
+
+Result. ∀x ∈ X : T(x)∧S(x) ⇒ A(x)
+```
+
+#### Solution (c):
+```
+There are no people who are 6.042 TA’s who did not get A’s in 6.042. 
+
+- There are no people is ¬∀x ∈ X
+- who are 6.042 TA’s is T(x)
+- who did not get A’s in 6.042 is ¬A(x)
+
+Result. ¬∃x ∈ X : T(x)∧(¬A(x))
+```
+
+#### Solution(d)
+```
+There are at least three people who are TA’s in 6.042 and have not taken 6.042
+
+- There are at least three people is ∃x,y,z ∈ X : (¬E(x,y)¬E(x,z)¬E(y,z))
+- who are TA’s in 6.042 is ∧T(x)∧T(y)∧T(z)
+- and have not taken 6.042 is ∧¬S(x)∧¬S(y)∧¬S(z)
+
+Result. ∃x,y,z ∈ X : (¬E(x,y)¬E(x,z)¬E(y,z))∧T(x)∧¬S(x)∧T(y)∧¬S(y)∧T(z)∧¬S(z)
 ```
