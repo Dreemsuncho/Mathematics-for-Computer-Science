@@ -115,21 +115,24 @@ Here is the truth table for nand:
 * __(ii)__ A ∨ B <br/>
 * __(iii)__ A ⇒ B
 
-__(b) [4 pts].__ It is actually possible to express each of the above using only nand, without needing to use ¬. Find an equivalent expression for ( A) using only nand and grouping ¬paren theses. 
+__(b) [4 pts].__ It is actually possible to express each of the above using only nand, without needing to use ¬. Find an equivalent expression for (¬A) using only nand and grouping ¬paren theses. 
 
 __(c) [8 pts].__ The constants true and false themselves may be expressed using only nand. Construct an expression using an arbitrary statement A and nand that evaluates to true regardless of whether A is true or false. Construct a second expression that always evaluates to false. Do not use the constants true and false themselves in your statements.
 
 #### Solution (a)
 ```
-A ∧ B = ¬(A nand B)
+  (i): A ∧ B = ¬(A nand B)
+ (ii): A ∨ B = ¬¬(A ∨ B) = ¬(¬(A) ∧ ¬(B)) = (¬¬(A) ∨ ¬¬(B))
+(iii): A ⇒ B = ¬(A ∧ ¬B) = (¬A ∨ B)
 ```
 
 #### Solution (b)
 ```
-A ∨ B = ¬¬(A ∨ B) = ¬(¬(A) ∧ ¬(B)) = (¬¬(A) ∨ ¬¬(B))
+(¬A) = (A nand A) = ((A nand A) and (A nand A))
 ```
 
 #### Solution (c)
 ```
-A ⇒ B = ¬(A ∧ ¬B) = (¬A ∨ B)
+True construction: (A nand (A nand A))
+False construction: ((A nand (A nand A)) nand (A nand (A nand A)))
 ```
