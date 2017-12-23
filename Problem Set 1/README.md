@@ -136,3 +136,48 @@ __(c) [8 pts].__ The constants true and false themselves may be expressed using 
 True construction: (A nand (A nand A))
 False construction: ((A nand (A nand A)) nand (A nand (A nand A)))
 ```
+
+## Problem 4. [10 points]
+You have 12 coins and a balance scale, one of which is fake. All the real coins weigh the same, but the fake coin weighs less than the rest. All the coins visually appear the same, and the diﬀerence in weight is imperceptible to your senses. In at most 3 weighings, give a strategy that detects the fake coin. (Note: the scale in this problem is a scale with two dishes, which tips toward the side that is heavier. For clariﬁcation, do an image search for “balance scale”). 
+
+#### Variant 1
+```
+All coins
+(Weight=1) (Weight=1) (Weight=1) (Weight=1)
+(Weight=1) (Weight=1) (Weight=1) (Weight=1)
+(Weight=1) (Weight=1) (Weight=1) (Weight=1/2)
+
+Let measuring first two sets.
+(Weight=1) (Weight=1) (Weight=1) (Weight=1) = 4
+(Weight=1) (Weight=1) (Weight=1) (Weight=1) = 4
+
+Then we conclude that small coin is in last batch of coins,
+therefore split it two by two and again on the scale.
+(Weight=1) (Weight=1) = 2
+(Weight=1) (Weight=1/2) = 1.5
+
+Again the above trick.
+(Weight=1) = 1
+(Weight=1/2) = 0.5 <- here is the fake coin
+```
+
+#### Variant 2
+```
+All coins
+(Weight=1) (Weight=1) (Weight=1) (Weight=1)
+(Weight=1) (Weight=1) (Weight=1) (Weight=1)
+(Weight=1) (Weight=1) (Weight=1) (Weight=1/2)
+
+Let measuring first and last sets.
+(Weight=1) (Weight=1) (Weight=1) (Weight=1) = 4
+(Weight=1) (Weight=1) (Weight=1) (Weight=1/2) = 3.5
+
+Then we conclude that small coin is in second batch of coins,
+therefore split it two by two and again on the scale.
+(Weight=1) (Weight=1) = 2
+(Weight=1) (Weight=1/2) = 1.5
+
+Again the above trick.
+(Weight=1) = 1
+(Weight=1/2) = 0.5 <- here is the fake coin
+```
