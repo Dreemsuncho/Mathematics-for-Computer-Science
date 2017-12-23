@@ -100,12 +100,14 @@ Conclusion: ¬(P ∧ (Q ∨ R)) = ¬P ∨ (¬Q ∨¬R) are no equivalent
 The binary logical connectives ∧ (and), ∨ (or), and (implies) appear often in not only ⇒computer programs, but also everyday speech. In computer chip designs, however, it is considerably easier to construct these out of another operation, nand, which is simpler to represent in a circuit. 
 
 Here is the truth table for nand: 
+```
  P | Q | P nand Q 
 ---|---|----------
  T | T |    F    
  T | F |    T
  F | T |    T
  F | F |    T
+ ```
 
  __(a) [12 pts].__ For each of the following expressions, ﬁnd an equivalent expression using only nand and ¬(not), as well as grouping parentheses to specify the order in which the operations apply. You may use A, B, and the operators any number of times.
 
