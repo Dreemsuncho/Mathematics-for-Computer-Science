@@ -2,7 +2,7 @@
 
 -There are people is ∃x ∈ X or ∃x,y ∈ X
 -who have taken 6.042 is S(x) or S(x)∧S(y)
--and have gotten A’s in 6.042 is ^A(x) or ∧A(x)∧A(y)
+-and have gotten A’s in 6.042 is ∧A(x) or ∧A(x)∧A(y)
 
 Solution 1 (One Person). ∃x ∈ X : S(x)∧A(x)
 Solution 2 (At Least 2 Persons). ∃x,y ∈ X : S(x)∧S(y)∧A(x)∧A(y)∧¬E(x,y)

@@ -1,0 +1,8 @@
+﻿All people who are 6.042 TA’s and have taken 6.042 got A’s in 6.042
+
+- All people is ∀x ∈ X
+- who are 6.042 TA’s is T(x)
+- and have taken 6.042 is ∧S(x)
+- got A’s in 6.042 is ⇒A(x)
+
+Solution. ∀x ∈ X : T(x)∧S(x) ⇒ A(x)
