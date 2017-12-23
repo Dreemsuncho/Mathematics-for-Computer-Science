@@ -181,3 +181,46 @@ Again the above trick.
 (Weight=1) = 1
 (Weight=1/2) = 0.5 <- here is the fake coin
 ```
+
+## Problem 5. [6 points]
+Prove the following statement by proving its contrapositive: if r is irrational, then r¹/⁵ is irrational. (Be sure to state the contrapositive explicitly.) 
+
+#### Solution
+```
+Contra: if r is rational then r¹/⁵ is rational.
+
+r¹/⁵ = (a / b) ⇒ 
+    r = (a⁵ / b⁵) ⇒
+        r is rational ⇒ 
+            if r is irrational, then r¹/⁵ is irrational.
+```
+
+
+## Problem 6. [12 points]
+Suppose that w2 + x2 + y2 = z2, where w, x, y, and z always denote positive integers. (Hint: It may be helpful to represent even integers as 2i and odd integers as 2j + 1, where i and j are integers) 
+Prove the proposition: z is even if and only if w, x, and y are even. Do this by considering all the cases of w,x,y being odd or even.
+
+#### Solution
+```
+z is even if and only if w, x, and y are even. Do this by considering all the cases of w,x,y being odd or even.
+
+Case 1: w,x,y = all even ⇒
+    4w² + 4x² + 4y² = 4(w² + x² + y²) = z² is even
+Case 2: w+1,x+1,y+1 = all odd ⇒ 
+    4w² + 4x² + 4y² = 4(w² + x² + y²) = z² is odd
+Case 3: x,y,y+1 = one odd ⇒
+    4w² + 4x² + 4y² = 4(w² + x² + y²) = z² is odd
+Case 4: x,y+1,y+1 = two odd ⇒ 
+    4w² + 4x² + 4y² = 4(w² + x² + y²) = z² is odd
+
+ w even | x even | y even | z even
+--------|--------|--------|--------
+ True   | True   | True   | True
+ True   | True   | False  | False
+ True   | False  | True   | False
+ True   | False  | False  | False
+ False  | True   | True   | False
+ False  | True   | False  | False
+ False  | False  | True   | False
+ False  | False  | False  | False
+```
